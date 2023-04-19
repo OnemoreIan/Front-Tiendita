@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router';
 const categories = [
   "Tecnología",
   "Entretenimiento",
@@ -56,59 +57,57 @@ function enviar() {
   <nav class="nav">
     <img src="" alt="icono sitio" class="icon" />
 
-    <div>
       <select name="categ" id="categ" class="dropdown">
         <option class="opcion" v-for="x in categories" :value="x">
           {{ x }}
         </option>
       </select>
-    </div>
 
-    <div>
       <select name="" id="" class="dropdown">
         <option class="opcion" v-for="x in countries" :value="x">
           {{ x }}
         </option>
       </select>
-    </div>
 
-    <div>
       <select name="" id="" class="dropdown">
         <option class="opcion" v-for="x in settings" :value="x">{{ x }}</option>
       </select>
-    </div>
 
-    <div>
       <form @submit.prevent="enviar">
         <input type="text" />
         <button class="submit">Buscar</button>
       </form>
-    </div>
+      <RouterLink to="/formulario">Formulario</RouterLink>
   </nav>
 </template>
 
 <style scoped>
 .nav {
-  min-height: 3rem;
+  min-height: 4rem;
   width: 100%;
   background-color: darkgreen;
   display: flex;
-  flex-flow: row;
+  flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
 }
 .dropdown {
   padding: 0.5rem 1rem;
   color: white;
+  font-size: 1rem;
   background-color: transparent;
 }
 .dropdown .opcion {
   background-color: transparent;
   color: black;
+  font-size: 1rem;
   border-bottom: 1px dotted yellow;
 }
 .submit {
   color: black;
   margin-left: 1rem;
 }
+
+
+
 </style>

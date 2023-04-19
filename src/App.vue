@@ -73,5 +73,11 @@ nav a:first-of-type {
   border: 0;
 }
 
+@media (max-width: 768px) {
+    *{
+        background-color: black;
+    }
+}
+
 
 </style>
