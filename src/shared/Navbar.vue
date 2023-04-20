@@ -1,5 +1,7 @@
 <script setup>
-import { RouterLink } from 'vue-router';
+import { RouterLink } from "vue-router";
+import IconEcosystem from "../components/icons/IconEcosystem.vue";
+
 const categories = [
   "Tecnología",
   "Entretenimiento",
@@ -55,29 +57,30 @@ function enviar() {
 
 <template>
   <nav class="nav">
-    <img src="" alt="icono sitio" class="icon" />
+    <IconEcosystem />
+    <!-- <img src="" alt="icono sitio" class="icon" /> -->
 
-      <select name="categ" id="categ" class="dropdown">
-        <option class="opcion" v-for="x in categories" :value="x">
-          {{ x }}
-        </option>
-      </select>
+    <select name="categ" id="categ" class="dropdown">
+      <option class="opcion" v-for="x in categories" :value="x">
+        {{ x }}
+      </option>
+    </select>
 
-      <select name="" id="" class="dropdown">
-        <option class="opcion" v-for="x in countries" :value="x">
-          {{ x }}
-        </option>
-      </select>
+    <select name="" id="" class="dropdown">
+      <option class="opcion" v-for="x in countries" :value="x">
+        {{ x }}
+      </option>
+    </select>
 
-      <select name="" id="" class="dropdown">
-        <option class="opcion" v-for="x in settings" :value="x">{{ x }}</option>
-      </select>
+    <select name="" id="" class="dropdown">
+      <option class="opcion" v-for="x in settings" :value="x">{{ x }}</option>
+    </select>
 
-      <form @submit.prevent="enviar">
-        <input type="text" />
-        <button class="submit">Buscar</button>
-      </form>
-      <RouterLink to="/formulario">Formulario</RouterLink>
+    <form @submit.prevent="enviar">
+      <input type="text" />
+      <button class="submit btn btn-danger">Buscar</button>
+    </form>
+    <RouterLink to="/formulario">Formulario</RouterLink>
   </nav>
 </template>
 
@@ -107,7 +110,4 @@ function enviar() {
   color: black;
   margin-left: 1rem;
 }
-
-
-
 </style>

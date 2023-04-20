@@ -16,7 +16,6 @@
 
 <style scoped>
 .control{
-    border: 1px solid blue;
     width: 80%;
     margin: 2rem auto;
     display: grid;
@@ -27,7 +26,6 @@
     align-items: center;
 }
 .top{
-    border: 1px solid red;
     width: 8rem;
     height: 8rem;
     cursor: pointer;
