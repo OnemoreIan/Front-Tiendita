@@ -1,10 +1,13 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <p class="h1">En desarrollo</p>
   </div>
 </template>
 
-<style>
+<style scoped>
+*{
+  color: black;
+}
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;

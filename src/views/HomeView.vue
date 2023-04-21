@@ -1,19 +1,63 @@
 <script setup>
 import TheWelcome from '../components/TheWelcome.vue'
+
+const preVista = [
+  {titulo: "Iphone SE",texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est blanditiis assumenda mollitia",precio:3847,img:"https://m.media-amazon.com/images/I/71rc5ZOayHL._AC_UL400_.jpg"},
+  {titulo: "Samsung Galaxy S20 Ultra",texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est blanditiis assumenda mollitia",precio:7500,img:"https://m.media-amazon.com/images/I/612IsCbjo5L._AC_UL400_.jpg"},
+  {titulo: "Iphone 11",texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est blanditiis assumenda mollitia",precio:6866,img:"https://m.media-amazon.com/images/I/31PpUfTCiFL._AC_UL400_.jpg"},
+  {titulo: "Iphone 13",texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est blanditiis assumenda mollitia",precio:14324,img:"https://m.media-amazon.com/images/I/71EvexPYtWL._AC_UL400_.jpg"},
+  {titulo: "Google Pixel 6",texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est blanditiis assumenda mollitia",precio:5696,img:"https://m.media-amazon.com/images/I/81eLhDX1TRL._AC_UL400_.jpg"},
+  {titulo: "Samsung Galaxy Z Flip",texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est blanditiis assumenda mollitia",precio:11500,img:"https://m.media-amazon.com/images/I/71NKRXSR3XL._AC_UL400_.jpg"},
+]
+
+const enlistado = [
+    "https://m.media-amazon.com/images/I/71rc5ZOayHL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/612IsCbjo5L._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/31PpUfTCiFL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/71EvexPYtWL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/81eLhDX1TRL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/71NKRXSR3XL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/61X8qZ+VmkL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/61jYjeuNUnL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/71wpsEiKDfL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/81mYHETHGEL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/61RZqNMKT6S._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/61SOUv7GCpL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/71FPETeyPaL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/513NI5xpYjL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/617FFRO3vcL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/61C7JqmRXUL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/518s1M0KMaL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/51wOdWN7PeL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/31ILQoX1tSL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/61YsYjlywtL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/51Jv+zvCoaL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/71Nv1150yrL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/61zoZotaooL._AC_UL400_.jpg",
+    "https://m.media-amazon.com/images/I/71KGfojh2wL._AC_UL400_.jpg",
+]
+
 </script>
 
 <template>
 
-  <article class="cartSect" v-for="x in 10">
+  <article class="contain-fluid">
 
-    <div>
-      <h5>Nombre del articulo</h5>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est blanditiis assumenda mollitia eaque deleniti earum iste sunt repellendus tenetur odit nemo minus minima ex pariatur, repellat, illum delectus recusandae a. </p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe debitis laudantium porro id vitae ipsa quo aliquam. Facere aperiam saepe repudiandae quia, quisquam animi neque expedita porro dolorem, blanditiis modi! </p>
-      <p>Informacin del producto</p>
-    </div>
+    <section v-for="x in preVista" class="row my-5">
+        
+        <div class="col-md-10">
+          <h5>{{ x.titulo }}</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est blanditiis assumenda mollitia eaque deleniti earum iste sunt repellendus tenetur odit nemo minus minima ex pariatur, repellat, illum delectus recusandae a. </p>
+          <p>{{ x.texto }}</p>
+          <p>{{ x.precio }}</p>
+        </div>
+  
+        <div class="col-md-2">
+          <img class="img-thumbnail artImg" :src="x.img" alt="imagen del producto">
+        </div>
+  
 
-    <img class="artImg" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Felektra.vteximg.com.br%2Farquivos%2Fids%2F336912-1000-1000%2F10000451.jpg%3Fv%3D636401238711200000&f=1&nofb=1&ipt=5bf03d15a5e5706ac6945ca71eb96d386119722376172cca167aba861b3c47ee&ipo=images" alt="imagen del producto">
+    </section>
 
   </article>
 
@@ -27,14 +71,12 @@ import TheWelcome from '../components/TheWelcome.vue'
   align-items: center;
   gap: 2rem;
 }
-.cartSect div{
-  padding-left: 1rem;
-}
-.artImg{
-  height: 10rem;
-  width: 10rem;
-  border-radius: 3rem;
-  box-shadow: 1px 1px 10px rgb(119, 119, 119);
-}
 
+.artImg{
+  max-height: 10rem;
+  max-width: 10rem;
+}
+h5,p{
+  color: black;
+}
 </style>

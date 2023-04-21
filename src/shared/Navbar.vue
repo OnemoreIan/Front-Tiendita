@@ -56,58 +56,128 @@ function enviar() {
 </script>
 
 <template>
-  <nav class="nav">
-    <IconEcosystem />
-    <!-- <img src="" alt="icono sitio" class="icon" /> -->
+  <nav class="navbar navbar-expand-lg navbar-scroll nav">
+    <div class="container-fluid">
+      <RouterLink to="/" class="navbar-brand">
+        <IconEcosystem />
+      </RouterLink>
 
-    <select name="categ" id="categ" class="dropdown">
-      <option class="opcion" v-for="x in categories" :value="x">
-        {{ x }}
-      </option>
-    </select>
+      <!-- <img src="" alt="icono sitio" class="icon" /> -->
 
-    <select name="" id="" class="dropdown">
-      <option class="opcion" v-for="x in countries" :value="x">
-        {{ x }}
-      </option>
-    </select>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navegacion"
+        aria-controls="navegacion"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <select name="" id="" class="dropdown">
-      <option class="opcion" v-for="x in settings" :value="x">{{ x }}</option>
-    </select>
+      <div class="collapse navbar-collapse anali" id="navegacion">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+          
+          <li class="nav-item dropdown mx-5">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Menu general
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <RouterLink class="dropdown-item" to="/"
+                  >Home</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="dropdown-item" to="/formulario"
+                  >Formulario</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="dropdown-item" to="/about"
+                  >Pendiente</RouterLink>
+              </li>
+            </ul>
+          </li>
 
-    <form @submit.prevent="enviar">
-      <input type="text" />
-      <button class="submit btn btn-danger">Buscar</button>
-    </form>
-    <RouterLink to="/formulario">Formulario</RouterLink>
+          <li class="nav-item dropdown mx-5">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Categorias
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <RouterLink
+                  class="dropdown-item"
+                  to="/"
+                  v-for="x in categories"
+                  :value="x">
+                  {{ x }}</RouterLink>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown mx-5">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Idiomas
+            </a>
+            <ul class="dropdown-menu">
+              <li v-for="x in countries">
+                <RouterLink class="dropdown-item" to="/">{{ x }}</RouterLink>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown mx-5">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Configuración
+            </a>
+            <ul class="dropdown-menu">
+              <li v-for="x in settings">
+                <RouterLink class="dropdown-item" to="/">{{ x }}</RouterLink>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="d-flex" role="search" @submit.prevent="enviar">
+          <input type="search" class="form-control me-3" placeholder="Buscar" aria-label="Search"/>
+          <button class="btn btn-outline-info">Buscar</button>
+        </form>
+      </div>
+    </div>
   </nav>
+
 </template>
 
 <style scoped>
+a{
+  font-size: 18px;
+  color: black;
+}
 .nav {
-  min-height: 4rem;
-  width: 100%;
-  background-color: darkgreen;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  align-items: center;
+  background: linear-gradient(355deg, rgb(2, 160, 17), rgb(0, 90, 17));
 }
-.dropdown {
-  padding: 0.5rem 1rem;
-  color: white;
-  font-size: 1rem;
-  background-color: transparent;
-}
-.dropdown .opcion {
-  background-color: transparent;
-  color: black;
-  font-size: 1rem;
-  border-bottom: 1px dotted yellow;
-}
-.submit {
-  color: black;
-  margin-left: 1rem;
+.analiw{
+  background-color: aqua;
 }
 </style>

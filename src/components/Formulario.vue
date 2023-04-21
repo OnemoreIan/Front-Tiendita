@@ -53,46 +53,52 @@ async handleSubmit() {
 </script>
 
 <template>
-  <section class="contForm">
-    <h3>Agregar contenido a la base de datos</h3>
 
-    <form class="formulario" @submit.prevent="envio">
-      <p>Envio de informacion a la tiendita</p>
-      <div class="input">
-        <label>Nombre del producto</label>
-        <input
-          type="text"
-          name="nom"
-          v-model="nombre"
-          placeholder="Nombre del producto"
-          required
-        />
-      </div>
-      <div class="input">
-        <label>Precio del producto</label>
-        <input type="number" min="1" name="pice" v-model="precio" required />
-      </div>
-      <div class="area">
-        <label class="labelArea"
-          >Descripcion del producto
-          <span class="optional">*Opcional</span></label
-        >
-        <textarea
-          name="descripcion"
-          v-model="descripcion"
-          placeholder="(Opcional) descripcion del producto"
-          cols="30"
-          rows="10"
-        ></textarea>
-      </div>
-      <button>Enviar</button>
-    </form>
-  </section>
+  <article class="contain-fluid">
+
+    <section class="row my-5">
+
+      <h3>Agregar contenido a la base de datos</h3>
+  
+      <form class="formulario" @submit.prevent="envio">
+        <p>Envio de informacion a la tiendita</p>
+        <div class="input">
+          <label>Nombre del producto</label>
+          <input
+            type="text"
+            name="nom"
+            v-model="nombre"
+            placeholder="Nombre del producto"
+            required/>
+        </div>
+        <div class="input">
+          <label>Precio del producto</label>
+          <input type="number" min="1" name="pice" v-model="precio" required />
+        </div>
+        <div class="area">
+          <label class="labelArea">Descripcion del producto
+            <span class="optional">*Opcional</span></label>
+          <textarea
+            name="descripcion"
+            v-model="descripcion"
+            placeholder="(Opcional) descripcion del producto"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <button>Enviar</button>
+      </form>
+
+    </section>
+
+  </article>
+
 </template>
 
 <style scoped>
 * {
   text-align: center;
+  color: black;
 }
 .input {
   padding: 1rem 0;
