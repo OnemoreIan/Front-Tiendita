@@ -100,6 +100,10 @@ function enviar() {
                 <RouterLink class="dropdown-item" to="/about"
                   >Pendiente</RouterLink>
               </li>
+              <li>
+                <RouterLink class="dropdown-item" to="/comentarios">
+                  Comentarios</RouterLink>
+              </li>
             </ul>
           </li>
 

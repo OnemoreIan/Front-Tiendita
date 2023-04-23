@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue';
 import Formulario from '../components/Formulario.vue';
+import Comentarios from '../views/Comentarios.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,11 @@ const router = createRouter({
       path:'/formulario',
       name:'enviar',
       component: Formulario
+    },
+    {
+      path:'/comentarios',
+      name:'opiniones',
+      component:Comentarios
     }
   ]
 })

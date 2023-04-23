@@ -1,17 +1,25 @@
 <script setup>
 import axios from 'axios';
+
+//apis
+// de undemy http://localhost:3900/api/almacenar
+// de la tiendita http://localhost:4500/api/<articuloe>
+
 import { ref } from "vue";
 const nombre = ref("");
 const precio = ref(Number);
+const cantidad = ref(Number);
 const descripcion = ref("");
+
 
 
 const envio = () => {
   //post 
   const blueprint = {
-    name: nombre.value,
-    price: precio.value,
-    description: descripcion.value,
+    nombre: nombre.value,
+    price:precio.value,
+    cantidad: cantidad.value,
+    descript: descripcion.value,
   };
   //"http://localhost:4500/articulo"
 
@@ -28,8 +36,9 @@ const envio = () => {
     body: JSON.stringify(blueprint)
   };
   
+  //http://localhost:3900/api/almacenar
 
-  fetch("http://localhost:3900/api/almacenar",configFetch)
+  fetch("http://localhost:4500/api/articulo",configFetch)
     .then(response => {
       if(!response.ok){
         throw new Error('Fallo al enviar la solicitud');
@@ -41,6 +50,7 @@ const envio = () => {
 
     nombre.value="";
     precio.value=null;
+    cantidad.value=null;
     descripcion.value="";
 };
 
@@ -66,20 +76,24 @@ async handleSubmit() {
           <label>Nombre del producto</label>
           <input
             type="text"
-            name="nom"
+            name="nombre"
             v-model="nombre"
             placeholder="Nombre del producto"
             required/>
         </div>
         <div class="input">
           <label>Precio del producto</label>
-          <input type="number" min="1" name="pice" v-model="precio" required />
+          <input type="number" min="1" name="price" v-model="precio" required />
+        </div>
+        <div class="input">
+          <label>Disponibilidad</label>
+          <input type="number" min="1" name="cantidad" v-model="cantidad" required />
         </div>
         <div class="area">
           <label class="labelArea">Descripcion del producto
             <span class="optional">*Opcional</span></label>
           <textarea
-            name="descripcion"
+            name="descript"
             v-model="descripcion"
             placeholder="(Opcional) descripcion del producto"
             cols="30"
