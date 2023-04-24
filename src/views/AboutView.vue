@@ -19,11 +19,18 @@ obtenerDatos();
 
     <section class="row my-5">
 
-      <div class="card p-2 my-2" v-for="x in info">
-        <p>{{ x.name }}</p>
-        <p>{{ x.price }}</p>
-        <p>{{ x.quantity }}</p>
-        <p>{{ x.description }}</p>
+      <div class="p-2 my-2 form-group" v-for="x in info">
+        <div class="col-md-3">
+          <p>{{ x.name }}</p>
+          <p>{{ x.price }}</p>
+          <p>{{ x.quantity }}</p>
+          <p>{{ x.description }}</p>
+        </div>
+        <div class="col-md-3">
+          <p></p>
+          <button class="btn btn-danger">Borrar</button>
+          <p></p>
+        </div>
       </div>
       
     </section>
