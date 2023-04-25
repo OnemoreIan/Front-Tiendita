@@ -1,10 +1,10 @@
 # Tiendita
 
-Proyecto de Tiendita fullstack, seccion front end
+Proyecto de Tiendita fullstack, Parte del front end
 
 ## Despliegue en Netlify
 
-> pendiente [Vite Configuration Reference](https://vitejs.dev/config/).
+> [Tiendita](https://tiendita-onemoreian.netlify.app/comentarios).
 
 ### Instalar dependencias
 
@@ -12,7 +12,7 @@ Proyecto de Tiendita fullstack, seccion front end
 npm install
 ```
 
-#### Pendiente mejorar estilos y añadir bootstrap
+#### Dar mejor estilo a la parte de comentarios y ajustar la fecha
 
 ### Empaquetado
 

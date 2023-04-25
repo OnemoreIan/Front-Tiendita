@@ -3,7 +3,7 @@ import { ref } from "vue";
 const comentario = ref("");
 const info = ref([]);
 const usuario = ref('');
-const api = "http://localhost:4500/api/comment";
+const api = "https://backend-tiendita-production.up.railway.app/api/comment";
 
 function consultaComentarios() {
   fetch(api)
