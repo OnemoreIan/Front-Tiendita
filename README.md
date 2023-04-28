@@ -4,7 +4,7 @@ Proyecto de Tiendita fullstack, Parte del front end
 
 ## Despliegue en Netlify
 
-> [Tiendita](https://master--tiendita-onemoreian.netlify.app/).
+> [Tiendita](https://tiendita-onemoreian.netlify.app/comentarios).
 
 ### Instalar dependencias
 
