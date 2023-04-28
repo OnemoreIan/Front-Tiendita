@@ -13,6 +13,8 @@ console.log(elementos); */
 <template>
   <section class="contain-fluid  my-4 overflow-hidden">
 
+    <h1 class="text-center">Tiendita</h1>
+
     <div class="col-lg-10 py-5 espacio mx-auto">
       <img v-for="x in dirImg" :src="x" alt="" class="destacado img-thumbnail">
     </div>
@@ -38,7 +40,8 @@ console.log(elementos); */
   cursor: pointer;
 }
 .espacio {
-  background: linear-gradient(235deg, rgb(109, 218, 0), rgb(230, 152, 71));
+  /* background: linear-gradient(235deg, rgb(109, 218, 0), rgb(230, 152, 71)); */
+  background: linear-gradient(rgb(105, 192, 204), rgb(72, 201, 224));
   border-radius: 2rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(6rem, auto));

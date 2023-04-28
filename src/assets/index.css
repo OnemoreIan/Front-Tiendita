@@ -2,14 +2,10 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-decoration: none;
-    color: whitesmoke;
 }
 body{
-    background: linear-gradient(145deg, #F5F5DC, rgb(235, 235, 235), #F5F5DC);
+    background: linear-gradient(145deg, #fcf1ed, rgb(235, 235, 235), #fcf1ed);
     position: relative;
-}
-input,button,textarea{
-    color: black;
 }

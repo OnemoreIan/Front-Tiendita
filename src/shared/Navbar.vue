@@ -51,7 +51,7 @@ const settings = [
 ];
 
 function enviar() {
-  alert("iiiii");
+  alert("Motivacion");
 }
 </script>
 
@@ -59,7 +59,7 @@ function enviar() {
   <nav class="navbar navbar-expand-lg navbar-scroll nav">
     <div class="container-fluid">
       <RouterLink to="/" class="navbar-brand">
-        <IconEcosystem />
+        <span class="fs-4">Tiendita</span>
       </RouterLink>
 
       <!-- <img src="" alt="icono sitio" class="icon" /> -->
@@ -77,7 +77,6 @@ function enviar() {
 
       <div class="collapse navbar-collapse anali" id="navegacion">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
-          
           <li class="nav-item dropdown mx-5">
             <a
               class="nav-link dropdown-toggle"
@@ -89,20 +88,22 @@ function enviar() {
             </a>
             <ul class="dropdown-menu">
               <li>
-                <RouterLink class="dropdown-item" to="/"
-                  >Home</RouterLink>
+                <RouterLink class="dropdown-item" to="/">Home</RouterLink>
               </li>
               <li>
                 <RouterLink class="dropdown-item" to="/formulario"
-                  >Formulario</RouterLink>
+                  >Formulario</RouterLink
+                >
               </li>
               <li>
                 <RouterLink class="dropdown-item" to="/about"
-                  >Pendiente</RouterLink>
+                  >Pendiente</RouterLink
+                >
               </li>
               <li>
                 <RouterLink class="dropdown-item" to="/comentarios">
-                  Comentarios</RouterLink>
+                  Comentarios</RouterLink
+                >
               </li>
             </ul>
           </li>
@@ -113,7 +114,8 @@ function enviar() {
               href="#"
               role="button"
               data-bs-toggle="dropdown"
-              aria-expanded="false">
+              aria-expanded="false"
+            >
               Categorias
             </a>
             <ul class="dropdown-menu">
@@ -122,8 +124,10 @@ function enviar() {
                   class="dropdown-item"
                   to="/"
                   v-for="x in categories"
-                  :value="x">
-                  {{ x }}</RouterLink>
+                  :value="x"
+                >
+                  {{ x }}</RouterLink
+                >
               </li>
             </ul>
           </li>
@@ -164,24 +168,33 @@ function enviar() {
         </ul>
 
         <form class="d-flex" role="search" @submit.prevent="enviar">
-          <input type="search" class="form-control me-3" placeholder="Buscar" aria-label="Search"/>
-          <button class="btn btn-outline-info">Buscar</button>
+          <input
+            type="search"
+            class="form-control me-3"
+            placeholder="Buscar"
+            aria-label="Search"
+          />
+          <button class="btn btn-info">Buscar</button>
         </form>
       </div>
     </div>
   </nav>
-
 </template>
 
 <style scoped>
-a{
+a {
   font-size: 18px;
   color: black;
 }
 .nav {
-  background: linear-gradient(355deg, rgb(2, 160, 17), rgb(0, 90, 17));
+  /* background: linear-gradient(355deg, rgb(2, 160, 17), rgb(7, 125, 29)); */
+  background: radial-gradient(
+    circle at 100% 0%,
+    rgb(215, 60, 60),
+    rgb(158, 28, 28)
+  );
 }
-.analiw{
+.analiw {
   background-color: aqua;
 }
 </style>
