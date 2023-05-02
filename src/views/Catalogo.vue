@@ -1,5 +1,5 @@
 <script setup>
-import TheWelcome from "../components/TheWelcome.vue";
+import Destacado from "../components/Destacado.vue";
 
 const preVista = [
   {
@@ -75,8 +75,12 @@ const enlistado = [
 </script>
 
 <template>
-  <article class="contain-fluid">
-    <section class="row my-2 justify-content-evenly  align-items-center">
+  <article class="mb-5">
+    <Destacado />
+  </article>
+
+  <article class="contain-fluid  main">
+    <section class="row mt-5 justify-content-evenly  align-items-center">
       <div class="col-md-5 row m-2 align-items-center" v-for="x in preVista">
         <div class="col-md-9">
           <h5>{{ x.titulo }}</h5>
@@ -91,11 +95,7 @@ const enlistado = [
         </div>
 
         <div class="col-md-3 ">
-          <img
-            class="img-thumbnail artImg"
-            :src="x.img"
-            alt="imagen del producto"
-          />
+          <img class="img-thumbnail artImg" :src="x.img" alt="imagen del producto" />
         </div>
       </div>
     </section>
@@ -109,13 +109,22 @@ const enlistado = [
   grid-template-columns: repeat(2, minmax(50%, 25rem));
   gap: 0.5rem;
 }
+
 .artImg {
   max-height: 10rem;
   max-width: 10rem;
 }
+
 .articulo {
   background-color: rgb(1, 110, 110);
 }
+
+.main {
+  min-height: 80vh;
+  width: 80%;
+  margin: 1rem auto;
+}
+
 h5,
 p {
   color: black;

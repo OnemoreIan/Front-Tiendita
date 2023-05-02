@@ -11,11 +11,8 @@ import Destacado from './components/Destacado.vue';
     <Navbar/>
   </header>
 
-  <article>
-    <Destacado/>
-  </article>
 
-  <main class="main">
+  <main >
     <RouterView />
   </main>
 

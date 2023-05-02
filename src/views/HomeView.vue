@@ -1,5 +1,4 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
 
 const preVista = [
   {titulo: "Iphone SE",texto: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est blanditiis assumenda mollitia",precio:3847,img:"https://m.media-amazon.com/images/I/71rc5ZOayHL._AC_UL400_.jpg"},

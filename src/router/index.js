@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import Formulario from '../components/Formulario.vue';
 import Comentarios from '../views/Comentarios.vue';
 import Catalogo from '../views/Catalogo.vue';
+import Galeria from '../views/Galeria.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,6 +12,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: Catalogo
+    },
+    {
+      path: '/galeria',
+      name: 'imagenes',
+      component: Galeria
     },
     {
       path: '/about',
